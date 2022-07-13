@@ -1,0 +1,26 @@
+diff --git a/node_modules/react-select/dist/Select-d53e3329.browser.esm.js b/node_modules/react-select/dist/Select-d53e3329.browser.esm.js
+index 3d7ddf7..12ee9a3 100644
+--- a/node_modules/react-select/dist/Select-d53e3329.browser.esm.js
++++ b/node_modules/react-select/dist/Select-d53e3329.browser.esm.js
+@@ -2239,7 +2239,7 @@ var Select = /*#__PURE__*/function (_Component) {
+           selectProps = _this$commonProps.selectProps;
+       return /*#__PURE__*/React.createElement(Input, _extends({
+         autoCapitalize: "none",
+-        autoComplete: "off",
++        autoComplete: "nope",
+         autoCorrect: "off",
+         cx: cx,
+         getStyles: this.getStyles,
+diff --git a/node_modules/react-select/src/Select.js b/node_modules/react-select/src/Select.js
+index d44c7fd..4ea4d9d 100644
+--- a/node_modules/react-select/src/Select.js
++++ b/node_modules/react-select/src/Select.js
+@@ -1524,7 +1524,7 @@ export default class Select extends Component<Props, State> {
+     return (
+       <Input
+         autoCapitalize="none"
+-        autoComplete="off"
++        autoComplete="nope"
+         autoCorrect="off"
+         cx={cx}
+         getStyles={this.getStyles}

@@ -1,0 +1,16 @@
+diff --git a/node_modules/robot-hooks/index.d.ts b/node_modules/robot-hooks/index.d.ts
+index ececeb7..80fe1c7 100644
+--- a/node_modules/robot-hooks/index.d.ts
++++ b/node_modules/robot-hooks/index.d.ts
+@@ -2,9 +2,9 @@ declare module 'robot-hooks' {
+   import type {Machine, SendFunction, Service} from 'robot3';
+   function useMachine<M extends Machine>(
+     machine: M,
+-    initialContext?: M['context']
++    initialContext?: Partial<M['context']>
+   ): [
+-    M['state'] & {context: M['context']},
++    Machine['state'] & {context: M['context']} & { service: Service },
+     SendFunction,
+     Service<typeof machine>
+   ];

@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-dropzone/typings/react-dropzone.d.ts b/node_modules/react-dropzone/typings/react-dropzone.d.ts
+index 1b36c44..d7fdcc7 100644
+--- a/node_modules/react-dropzone/typings/react-dropzone.d.ts
++++ b/node_modules/react-dropzone/typings/react-dropzone.d.ts
+@@ -15,9 +15,10 @@ export enum ErrorCode {
+   TooManyFiles = 'too-many-files',
+ }
+ 
+-export interface FileError {
++export interface FileError<T> {
+   message: string;
+   code: ErrorCode | string;
++  payload?: T;
+ }
+ 
+ export interface FileRejection {

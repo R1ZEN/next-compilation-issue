@@ -1,0 +1,25 @@
+diff --git a/node_modules/next/dist/client/image.d.ts b/node_modules/next/dist/client/image.d.ts
+index b30740a..6067376 100644
+--- a/node_modules/next/dist/client/image.d.ts
++++ b/node_modules/next/dist/client/image.d.ts
+@@ -24,7 +24,7 @@ export interface StaticImageData {
+ interface StaticRequire {
+     default: StaticImageData;
+ }
+-declare type StaticImport = StaticRequire | StaticImageData;
++export declare type StaticImport = StaticRequire | StaticImageData;
+ export declare type ImageProps = Omit<JSX.IntrinsicElements['img'], 'src' | 'srcSet' | 'ref' | 'width' | 'height' | 'loading'> & {
+     src: string | StaticImport;
+     width?: number | string;
+diff --git a/node_modules/next/dist/shared/lib/utils.d.ts b/node_modules/next/dist/shared/lib/utils.d.ts
+index 0a275aa..0f1a942 100644
+--- a/node_modules/next/dist/shared/lib/utils.d.ts
++++ b/node_modules/next/dist/shared/lib/utils.d.ts
+@@ -14,6 +14,7 @@ export declare type NextComponentType<C extends BaseContext = NextPageContext, I
+      * @param ctx Context of `page`
+      */
+     getInitialProps?(context: C): IP | Promise<IP>;
++    getAppProps?: (props: Record<string, any>) => Record<string, any>;
+ };
+ export declare type DocumentType = NextComponentType<DocumentContext, DocumentInitialProps, DocumentProps>;
+ export declare type AppType = NextComponentType<AppContextType, AppInitialProps, AppPropsType>;

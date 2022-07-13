@@ -1,0 +1,19 @@
+# ide
+.idea/
+.vscode/
+
+# npm
+**/node_modules/*
+package.json
+
+# TODO: consider to include generated types to git
+lib/graphql/types.ts
+.next-server/
+
+**/coverage/*
+
+cypress
+
+next-env.d.ts
+
+!.size-limit.js

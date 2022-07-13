@@ -1,0 +1,11 @@
+diff --git a/node_modules/react-slidedown/lib/slidedown.d.ts b/node_modules/react-slidedown/lib/slidedown.d.ts
+index 4fd4324..8db6dbb 100644
+--- a/node_modules/react-slidedown/lib/slidedown.d.ts
++++ b/node_modules/react-slidedown/lib/slidedown.d.ts
+@@ -1,5 +1,5 @@
+ import React from 'react';
+-interface SlideDownProps extends React.HTMLAttributes<HTMLDivElement> {
++export interface SlideDownProps extends React.HTMLAttributes<HTMLDivElement> {
+     as?: keyof JSX.IntrinsicElements | React.ComponentType<any>;
+     closed?: boolean;
+     transitionOnAppear?: boolean;

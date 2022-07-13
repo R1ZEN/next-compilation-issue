@@ -1,0 +1,16 @@
+diff --git a/node_modules/@types/node/http.d.ts b/node_modules/@types/node/http.d.ts
+index 72a478a..c469c1f 100644
+--- a/node_modules/@types/node/http.d.ts
++++ b/node_modules/@types/node/http.d.ts
+@@ -342,6 +342,11 @@ declare module "http" {
+          */
+         statusMessage?: string;
+         destroy(error?: Error): void;
++
++        // App variables
++        device: Record<'isMobile' | 'isIOS', boolean>;
++        // TODO: specify
++        seoPayload?: {};
+     }
+ 
+     interface AgentOptions {
